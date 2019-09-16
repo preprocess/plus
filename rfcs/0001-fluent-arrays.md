@@ -20,41 +20,41 @@ Also, using these methods in a fluent way is much more natural than e.g. mapping
 
 `->` calls to arrays should be converted to calls to the respective low-level functions:
 - ```php
-[1, 2, 3]->map(function ($n) {
-    return $n*2;
-});
+    [1, 2, 3]->map(function ($n) {
+        return $n*2;
+    });
     ```
     should be translated to
     ```php
-array_map(function ($n) {
-    return $n*2;
-}, [1, 2, 3]);
+    array_map(function ($n) {
+        return $n*2;
+    }, [1, 2, 3]);
     ```
 - ```php
-$odd = [1, 2, 3]->filter(function ($n) {
-    return $n & 1;
-});
+    $odd = [1, 2, 3]->filter(function ($n) {
+        return $n & 1;
+    });
     ```
     should be translated to
     ```php
-array_filter([1, 2, 3], function ($n) {
-    return $n*2;
-});
+    array_filter([1, 2, 3], function ($n) {
+        return $n*2;
+    });
     ```
 - ```php
-$prices = $products->filter(function ($product) {
-    return $product->category == 'foo';
-})->map(function ($product) {
-    return $product->price;
-});
+    $prices = $products->filter(function ($product) {
+        return $product->category == 'foo';
+    })->map(function ($product) {
+        return $product->price;
+    });
     ```
     should be translated to
     ```php
-$prices = array_map(function ($product) {
-    return $product->price;
-}, array_filter($products, function ($product) {
-    return $product->category == 'foo';
-}));
+    $prices = array_map(function ($product) {
+        return $product->price;
+    }, array_filter($products, function ($product) {
+        return $product->category == 'foo';
+    }));
     ```
 
 An alternative implementation would be to wrap `->` calls to arrays in some global helper that would create an instance of a class like this:
