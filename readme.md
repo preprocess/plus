@@ -13,8 +13,7 @@
 
 Plus is a **runtime compiler** that adds features to PHP - It's also a package that you can require using
 composer, and is mainly used to add features and syntactic sugar to existant PHP code. Of course, those features
-arrive in PHP using runtime source code transformations. It was created by, and currently maintained by **[Nuno Maduro](https://github.com/nunomaduro)**,
-**[Christopher Pitt](https://github.com/assertchris)**. Art work is provided by **[Caneco](https://twitter.com/caneco)**.
+arrive in PHP using runtime source code transformations. It was created by, and currently maintained by **[Nuno Maduro](https://github.com/nunomaduro)**, and **[Christopher Pitt](https://github.com/assertchris)**. Art work is provided by **[Caneco](https://twitter.com/caneco)**.
 
 Enjoy a simple and powerful syntax that enables developers to build very complex applications far more quickly
 than before. Short closures, types, enumerations are just a few examples of what you get using **Plus**.
