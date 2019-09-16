@@ -5,7 +5,7 @@
 **Plus** is 100% open source and developed collaboratively by people from all over the world. Even
 if you're not a programmer, you can get involved and make a difference.
 
-**Plus** is managed on [GitHub](https://github.com/pre/plus).
+**Plus** is managed on [GitHub](https://github.com/preprocess/plus).
 
 ## You are a developer?
 
@@ -22,12 +22,12 @@ we use the following convention: `type(branch-name): description`. Here are some
     - `fix(final-class-with-short-closures): add tests`
     - `chore(improves-linter): improves phpcs config on arrays`
 * You may need to [rebase](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) to avoid merge conflicts.
-* If you are changing the behavior, or the public API, you may need to update the docs here: [github.com/pre/plus/tree/master/website](https://github.com/pre/plus/tree/master/website).
+* If you are changing the behavior, or the public API, you may need to update the docs here: [github.com/preprocess/plus/tree/master/website](https://github.com/preprocess/plus/tree/master/website).
 * Before sending the pull request, add your changes into the `changelog.md`.
 * Finally, please remember that we follow [SemVer](http://semver.org/).
 
 ## License
 
-Of course, **Plus** is open-source software licensed under the [MIT license](https://github.com/pre/plus/tree/master/license.md).
+Of course, **Plus** is open-source software licensed under the [MIT license](https://github.com/preprocess/plus/tree/master/license.md).
 
 
