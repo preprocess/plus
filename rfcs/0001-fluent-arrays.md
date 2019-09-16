@@ -19,7 +19,8 @@ Also, using these methods in a fluent way is much more natural than e.g. mapping
 [reference-level-explanation]: #reference-level-explanation
 
 `->` calls to arrays should be converted to calls to the respective low-level functions:
-- ```php
+- The following code:
+    ```php
     [1, 2, 3]->map(function ($n) {
         return $n*2;
     });
@@ -30,7 +31,8 @@ Also, using these methods in a fluent way is much more natural than e.g. mapping
         return $n*2;
     }, [1, 2, 3]);
     ```
-- ```php
+- The following code:
+    ```php
     $odd = [1, 2, 3]->filter(function ($n) {
         return $n & 1;
     });
@@ -41,7 +43,8 @@ Also, using these methods in a fluent way is much more natural than e.g. mapping
         return $n*2;
     });
     ```
-- ```php
+- The following code:
+    ```php
     $prices = $products->filter(function ($product) {
         return $product->category == 'foo';
     })->map(function ($product) {
