@@ -1,0 +1,16 @@
+{
+    "name": "pre/plus",
+    "description": "➕ A superset of PHP that makes PHP cool again.",
+    "keywords": ["php", "plus", "pre", "preprocess", "transpiler"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nuno Maduro",
+            "email": "enunomaduro@gmail.com"
+        },
+        {
+            "name": "Christopher Pitt",
+            "email": "cgpitt@gmail.com"
+        }
+    ]
+}
