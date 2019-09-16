@@ -25,7 +25,7 @@ Also, using these methods in a fluent way is much more natural than e.g. mapping
         return $n*2;
     });
     ```
-    should be translated to
+    should be translated to:
     ```php
     array_map(function ($n) {
         return $n*2;
@@ -37,7 +37,7 @@ Also, using these methods in a fluent way is much more natural than e.g. mapping
         return $n & 1;
     });
     ```
-    should be translated to
+    should be translated to:
     ```php
     array_filter([1, 2, 3], function ($n) {
         return $n*2;
@@ -51,7 +51,7 @@ Also, using these methods in a fluent way is much more natural than e.g. mapping
         return $product->price;
     });
     ```
-    should be translated to
+    should be translated to:
     ```php
     $prices = array_map(function ($product) {
         return $product->price;
