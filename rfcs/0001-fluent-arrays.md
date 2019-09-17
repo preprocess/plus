@@ -100,7 +100,7 @@ The benefit of this solution is that common methods like `sum()`, `count()`, etc
 ```php
 public function __call($method, $args)
 {
-    return $method(...$args);
+    return $method($this, ...$args);
 }
 ```
 
