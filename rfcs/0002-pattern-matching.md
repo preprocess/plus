@@ -11,7 +11,7 @@ Allow multiple definitions of a function with different parameters.
 
 Some functions can be a lot more readable if pattern matching is used instead of doing `if` checks at the beginning of the function definition.
 
-[@olivernybroe](https://github.com/olivernybroe) mentioned a very good use case for this: the [`where` method of the Laravel Query Builder](https://github.com/laravel/framework/blob/2906b572aa83ff46b8ad57093dd0e859c0ff783f/src/Illuminate/Database/Query/Builder.php#L487-L548).
+[@olivernybroe](https://github.com/olivernybroe) [mentioned](https://github.com/php-plus/engine/issues/10) a very good use case for this: the [`where` method of the Laravel Query Builder](https://github.com/laravel/framework/blob/2906b572aa83ff46b8ad57093dd0e859c0ff783f/src/Illuminate/Database/Query/Builder.php#L487-L548).
 
 # Reference-level explanation
 [reference-level-explanation]: #reference-level-explanation
