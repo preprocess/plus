@@ -66,7 +66,7 @@ But to avoid converting all functions into this `...$args` form, the compiler sh
 
 I also think pattern matching *values* is a great feature. Take a look at this Haskell code:
 
-```php
+```haskell
 reverse' :: [a] -> [a]  
 reverse' [] = []  
 reverse' (x:xs) = reverse' xs ++ [x]  
