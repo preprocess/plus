@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/preprocess/plus/master/art/logo.png" width="334" alt="Plus">
+  <img src="https://raw.githubusercontent.com/preprocess/plus/master/art/logo.gif" width="530" alt="Plus">
   <p align="center">
     <a href="https://travis-ci.org/pre/plus"><img src="https://img.shields.io/travis/pre/plus/master.svg" alt="Build Status"></a>
     <a href="https://packagist.org/packages/pre/plus"><img src="https://poser.pugx.org/pre/plus/d/total.svg" alt="Total Downloads"></a>
