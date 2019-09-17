@@ -138,7 +138,7 @@ notation is useful when passing closures to functions like array_map or array_fi
 an example:
 
 ```php
-$names = array_map(($users) => $user->name, $users);
+$names = array_map(($user) => $user->name, $users);
 ```
 
 ## Type Hint Variables
