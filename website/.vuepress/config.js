@@ -4,7 +4,7 @@ module.exports = {
   sidebar: true,
   themeConfig: {
     displayAllHeaders: true,
-    repo: 'php-plus',
+    repo: 'preprocess/plus',
     sidebar: [
       '/prologue',
       '/get-started',
