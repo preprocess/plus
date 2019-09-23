@@ -18,7 +18,7 @@ class User {
     }
 
     // One expression functions with return statement
-    public getUppercasedName(): string => strtoupper($this->name)
+    public getUppercasedName(): string => strtoupper($this->name);
 }
 ```
 
