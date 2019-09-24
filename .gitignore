@@ -1,0 +1,6 @@
+.idea/*
+composer.lock
+/playground/
+/src/
+/vendor/
+.phpunit.result.cache
