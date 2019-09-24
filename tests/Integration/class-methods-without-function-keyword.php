@@ -4,25 +4,25 @@ declare(strict_types=1);
 
 declare(plus=1);
 
-$a = new Foo();
+$foo = new Foo();
 
-test('methods', function () use ($a) {
-    assertEquals('foo', $a->method());
+test('methods', function () use ($foo) {
+    assertEquals('foo', $foo->method());
 });
 
-test('final methods', function () use ($a) {
-    assertEquals('foo', $a->methodFinal());
+test('final methods', function () use ($foo) {
+    assertEquals('foo', $foo->methodFinal());
 });
 
-test('return type', function () use ($a) {
-    assertEquals('foo', $a->methodWithReturnType());
+test('return type', function () use ($foo) {
+    assertEquals('foo', $foo->methodWithReturnType());
 });
 
-test('args', function () use ($a) {
+test('args', function () use ($foo) {
     $args = ['1', 2, ['a', 'b']];
     $expected = array_merge($args, ['foo']);
 
-    assertEquals($args + $expected, $a->args(...$args));
+    assertEquals($args + $expected, $foo->args(...$args));
 });
 
 
