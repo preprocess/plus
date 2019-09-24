@@ -35,7 +35,8 @@ composer require pre/plus
 
 declare(plus=1);
 
-class User {
+class User
+{
     // A readonly property cannot be assigned after the constructor exits
     public readonly string $name;
 
