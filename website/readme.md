@@ -2,7 +2,7 @@
 home: true
 description: A superset of PHP that makes PHP cool again.
   Plus is a work in progress, it may still change, perhaps profoundly.
-heroImage: /logo.png
+heroImage: /logo.gif
 actionText: Documentation →
 actionLink: /prologue
 sidebar: true
