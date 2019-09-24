@@ -37,7 +37,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "NunoMaduro\\Plus\\": "src/"
+            "Pre\\Plus\\": "src/"
         },
         "files": [
             "src/bootstrap.php"
