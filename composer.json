@@ -1,7 +1,7 @@
 {
     "name": "pre/plus",
     "description": "➕ A superset of PHP that makes PHP cool again.",
-    "keywords": ["php", "plus", "pre", "preprocess", "transpiler"],
+    "keywords": ["php", "plus", "superset"],
     "license": "MIT",
     "authors": [
         {
@@ -12,5 +12,58 @@
             "name": "Christopher Pitt",
             "email": "cgpitt@gmail.com"
         }
-    ]
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.15",
+        "localheinz/phpstan-rules": "^0.12.0",
+        "nunomaduro/pest": "^0.1",
+        "nunomaduro/phpinsights": "^1.7",
+        "phpstan/phpstan": "^0.11.12",
+        "phpstan/phpstan-strict-rules": "^0.11.1",
+        "roave/no-floaters": "^1.1",
+        "symfony/var-dumper": "^4.3",
+        "thecodingmachine/phpstan-strict-rules": "^0.11.2"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/",
+            "Playground\\": "playground/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "NunoMaduro\\Plus\\": "src/"
+        },
+        "files": [
+            "src/bootstrap.php"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist"
+    },
+    "scripts": {
+        "phpstan":"phpstan analyse --ansi",
+        "ecs": "ecs check src --ansi --config vendor/symplify/easy-coding-standard/config/set/clean-code.yaml",
+        "pest": "phpstan analyse tests --ansi && pest",
+        "insights": "phpinsights analyse --ansi -v --no-interaction --min-quality=100 --min-architecture=100 --min-style=100 --disable-security-check",
+        "tests": [
+            "@ecs",
+            "@phpstan",
+            "@pest",
+            "@insights"
+        ]
+    },
+    "scripts-descriptions": {
+        "ecs": "Run the ecs tests.",
+        "phpstan": "Run the phpstan tests.",
+        "pest": "Run the pest tests against himself.",
+        "insights": "Run the phpinsights tests.",
+        "tests": "Run all tests."
+    }
 }
