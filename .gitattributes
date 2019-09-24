@@ -1,0 +1,11 @@
+/art               export-ignore
+/rfcs              export-ignore
+/website           export-ignore
+.editorconfig      export-ignore
+.gitattributes     export-ignore
+.gitignore         export-ignore
+CHANGELOG.md       export-ignore
+CONTRIBUTING.md    export-ignore
+phpunit.xml.dist   export-ignore
+phpstan.neon.dist  export-ignore
+
