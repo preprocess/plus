@@ -1,0 +1,14 @@
+$(macro: recursion) {
+    $(\Pre\Standard\Parser\visibilityModifiers())
+    $(T_STRING as name)
+    (
+    $(optional(\Pre\Standard\Parser\arguments()))
+    )
+    $(optional(chain(token(':'), \Pre\Standard\Parser\type())) as type)
+    $(between(token('{'), layer(), token('}')) as body)
+} >> {
+    $(visibilityModifiers) function $(name) ($$(\Pre\Standard\Expander\arguments($(arguments)))) $$(\Pre\Standard\Expander\type($(type)))
+    {
+        $(body)
+    }
+}

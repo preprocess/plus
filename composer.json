@@ -14,7 +14,9 @@
         }
     ],
     "require": {
-        "php": "^7.2"
+        "php": "^7.2",
+        "pre/standard": "dev-master",
+        "yay/yay": "dev-composable-expanders"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.15",
@@ -65,5 +67,11 @@
         "pest": "Run the pest tests against himself.",
         "insights": "Run the phpinsights tests.",
         "tests": "Run all tests."
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://repo.packagist.org"
+        }
     }
 }
