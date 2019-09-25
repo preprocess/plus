@@ -4,10 +4,10 @@ $(macro: recursion) {
     (
     $(optional(\Pre\Standard\Parser\arguments()))
     )
-    $(optional(chain(token(':'), \Pre\Standard\Parser\type())) as type)
+    $(optional(\Pre\Standard\Parser\returnType()))
     $(between(token('{'), layer(), token('}')) as body)
 } >> {
-    $(visibilityModifiers) function $(name) ($$(\Pre\Standard\Expander\arguments($(arguments)))) $$(\Pre\Standard\Expander\type($(type)))
+    $$(\Pre\Standard\Expander\visibilityModifiers($(visibilityModifiers))) function $(name) ($$(\Pre\Standard\Expander\arguments($(arguments)))) $$(\Pre\Standard\Expander\returnType($(returnType)))
     {
         $(body)
     }
