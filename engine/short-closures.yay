@@ -1,0 +1,47 @@
+$(macro: recursion) {
+    (
+    $(optional(\Pre\Standard\Parser\arguments()))
+    )
+    $(optional(\Pre\Standard\Parser\returnType()))
+    $(buffer('=>'))
+    $(either(
+        between(token('{'), layer(), token('}')) as nonReturnableBody,
+        layer() as returnableBody
+    ))
+    $(_() as scope)
+} >> function($ast) {
+    $defined = array_fill_keys(array_map(function ($node) {
+        return (string) $node->value();
+    }, $ast->{'params'}), true);
+
+    $scoped = ['$_' => true];
+    $scope = (new \Yay\Ast('scope'))
+        ->push(new \Yay\Ast('var', new \Yay\Token(T_VARIABLE, '$_')));
+
+    $body = $ast->{'* nonReturnableBody'}->unwrap() !== null
+        ? $ast->{'* nonReturnableBody'}
+        : $ast->{'* returnableBody'};
+
+    foreach ($body->tokens() as $token) {
+        if ($token->is(T_VARIABLE) && ('$this' !== (string) $token) && false === isset($defined[(string) $token]) && false === isset($scoped[(string) $token])) {
+            $scope->push(new \Yay\Ast('var', $token));
+            $scoped[(string) $token] = true;
+        }
+    }
+
+    $ast->append($scope);
+} >> {
+    [
+        $(scope ...(, ) { $(var) = $(var) ?? null}),
+        '__plus_short_closure' => function ($$(\Pre\Standard\Expander\arguments($(arguments)))) use ($(scope ...(, ) { $(var) })) $$(\Pre\Standard\Expander\returnType($(returnType)))
+        {
+            $(nonReturnableBody ? {
+                $(nonReturnableBody);
+            })
+
+            $(returnableBody ? {
+                return $(returnableBody);
+            })
+        }
+    ]['__plus_short_closure']
+}
