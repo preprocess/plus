@@ -1,0 +1,9 @@
+$(macro: recursion) {
+    $(token(T_TRY))
+    $({...} as body)
+    $(not(token(T_CATCH)))
+} >> {
+    try {
+        $(body)
+    } catch (\Exception $_) {}
+}
