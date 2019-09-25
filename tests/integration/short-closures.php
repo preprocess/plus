@@ -18,9 +18,9 @@ $tap = () => {
     return true;
 };
 
-test('one line short closures return type', (): bool => $tap());
+test('one line short closures with return type', (): bool => $tap());
 
-test('multi line short closures return type', (): void => {
+test('multi line short closures with return type', (): void => {
     assertTrue(true);
 });
 
