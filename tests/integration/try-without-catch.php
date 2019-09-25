@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 declare(plus=1);
 
-test('catch application exceptions', function () {
+test('catch application exceptions', () => {
     try {
         throw new Exception();
     }
@@ -12,7 +12,7 @@ test('catch application exceptions', function () {
     assertTrue(true);
 });
 
-test('does not catch exceptions that not extend \Exception', function () {
+test('does not catch exceptions that not extend \Exception', () => {
 
     $e = null;
 

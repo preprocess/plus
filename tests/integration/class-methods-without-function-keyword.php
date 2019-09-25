@@ -6,19 +6,19 @@ declare(plus=1);
 
 $foo = new Foo();
 
-test('methods', function () use ($foo) {
+test('methods', () => {
     assertEquals('foo', $foo->method());
 });
 
-test('final methods', function () use ($foo) {
+test('final methods', () => {
     assertEquals('foo', $foo->methodFinal());
 });
 
-test('return type', function () use ($foo) {
+test('return type', () => {
     assertEquals('foo', $foo->methodWithReturnType());
 });
 
-test('args', function () use ($foo) {
+test('args', () => {
     $args = ['1', 2, ['a', 'b']];
     $expected = array_merge($args, ['foo']);
 
