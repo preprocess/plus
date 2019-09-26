@@ -9,8 +9,7 @@ module.exports = {
       '/prologue',
       '/get-started',
       '/handbook',
-      '/contribute',
-      '/funding'
+      '/contribute'
     ]
   },
   plugins: [

@@ -2,13 +2,20 @@
 
 > This document is a work in progress, it may still change, perhaps profoundly.
 
-**Plus is a runtime compiler that adds features to PHP** - It's also a package that you can
-require using `composer`, and is mainly used to add features and syntactic sugar to existant PHP
-code. Of course, those features arrive in PHP using runtime source code transformations.
+**Plus is a runtime compiler that adds features to PHP** - It’s also a package that
+you can require using composer and is mainly used to add features and syntactic
+sugar to existent PHP code. Of course, those features arrive in PHP using runtime
+source code transformations **without any performance loss**.
 
-Here is an example:
+Also, it’s optional as is a per-file declaration - Painless to get started:
+
 ```php
-class User {
+<?php
+
+declare(plus=1);
+
+class User
+{
     // A readonly property cannot be assigned after the constructor exits
     public readonly string $name;
 
@@ -21,6 +28,20 @@ class User {
     public getUppercasedName(): string => strtoupper($this->name);
 }
 ```
+
+### Philosophies
+
+**Plus** is beautifully integrated with PHP's existing ecosystem. It starts from
+the same syntax and semantics that millions of PHP developers know today, and
+it **does not get in the away of the developer** - begins and ends with PHP.
+
+We focus on making the **code simpler**, offering you syntactic sugar to perform
+the most common tasks - do the same, writing less. Also, enjoy the productivity
+without breaking things, Plus's code is tailored for **static analysis**.
+
+**Plus is just like regular PHP** - it was first-class debug, and it's supported
+by the most common code editors. It's carefully crafted to make you the
+most productive developer in the world.
 
 ### Static analysis
 
@@ -44,10 +65,3 @@ Of course, you can still use **Plus** without any static analysis tool and enjoy
 sugar such as `short closures` and others.
 
 > Learn more about [Phpstan](https://github.com/phpstan/phpstan) and [Psalm](https://github.com/vimeo/psalm).
-
-### Drawbacks
-
-You probably are worried about what are the drawbacks of using **Plus** today - and, at the time
-of this writing, here is the list of drawbacks today:
-
-- Missing PHPStorm plugin
