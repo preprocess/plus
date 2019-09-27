@@ -2,6 +2,8 @@
 
 > This document is a work in progress, it may still change, perhaps profoundly.
 
+## Installation
+
 > **Requires:** [PHP 7.2+](https://php.net/releases)
 
 You may install **Plus** by issuing the [Composer](https://getcomposer.org) `require` command in your terminal:
