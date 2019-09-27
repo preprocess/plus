@@ -13,7 +13,7 @@ composer require pre/plus
 ```
 
 After installing **Plus**, you need to add `declare(plus=1);` on PHP files where
-you wanna the new syntax that **Plus** has to offer. Here is an example:
+you wanna use the new syntax that **Plus** has to offer. Here is an example:
 
 ```php
 <?php
