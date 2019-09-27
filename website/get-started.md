@@ -23,24 +23,14 @@ declare(plus=1);
 Route::get('/', () => view('welcome'));
 ```
 
-## Source Map support
+## Source maps support
 
-> Note: this step is only required if you are using `Plus` with tools that implement their own exception handler.
+**Plus** supports the generation of source maps natively, overriding the PHP default exception
+handler to reconstruct the original source code before dispatching it to your debugger or logger.
 
-**Plus** supports natively the generation of source maps, each allows the PHP exception handler
-to reconstruct the original source code before show it on your debugger or logger.
+PHP frameworks and tools often implement their own exception handler; each makes your debugger
+or logger showing you the transformed file instead. Luckily, on the time of this writing, **Plus**
+officially supports **Laravel**, and **PHPUnit** - if you are using one of those two tools,
+you always will see code written in **Plus**.
 
-If you are using a tool that overrides the native PHP exception handler, you may need to install
-one or more of the plugins bellow.
-
-| Tool <img width=200/>    | Plugin <img width=500/>   |
-|-----------               |------------------         |
-| Laravel                  | pre/plus-laravel          |
-| PHPUnit                  | pre/plus-phpunit          |
-| Symfony                  | pre/plus-symfony          |
-
-As example, within the Laravel Framework, you may need require the following plugin:
-
-```bash
-composer require pre/plus-laravel
-```
+If you are using any other framework, you may need to propose an adapter under the directory [src/Adapters](https://github.com/preprocess/plus/tree/master/src/Adapters).
