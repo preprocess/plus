@@ -17,7 +17,7 @@ features:
         your code without actually running it.
     - title: Yes - It's PHP
       details: Plus starts from the same syntax and semantics that millions of PHP developers
-        know today - and works out-of-the-box with any PHP application Also, it's optional
+        know today - and works out-of-the-box with any PHP application. Also, it's optional
         as is a per-file declaration - Painless to get started.
 
 footer: MIT Licensed | Copyright © Plus
