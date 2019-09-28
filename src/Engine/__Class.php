@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Pre\Plus\Engine;
 
 trait __Class
