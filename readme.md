@@ -11,12 +11,13 @@
   </p>
 </p>
 
-Plus is a **runtime compiler** that adds features to PHP - It's also a package that you can require using
-composer, and is mainly used to add features and syntactic sugar to existing PHP code. Of course, those features
-arrive in PHP using runtime source code transformations. It was created by, and currently maintained by **[Nuno Maduro](https://github.com/nunomaduro)**, and **[Christopher Pitt](https://github.com/assertchris)**. Art work is provided by **[Caneco](https://twitter.com/caneco)**.
+Plus is a **runtime compiler** that adds features to PHP - It’s also a package that you can require using composer and is mainly used to add features and syntactic sugar to existent PHP code. Of course, those features arrive in PHP using runtime source code transformations **without any performance loss**.
 
-Enjoy a simple and powerful syntax that enables developers to build very complex applications far more quickly
-than before. Short closures, types, enumerations are just a few examples of what you get using **Plus**.
+Plus is **beautifully integrated with PHP's existing ecosystem**. It starts from the same syntax and semantics that millions of PHP developers know today, and it does not get in the away of the developer - begins and ends with PHP.
+
+**Plus is just like regular PHP** - it was first-class debug, and it's supported by the most common code editors. It's carefully crafted to make you the most productive developer in the world.
+
+It was created by, and currently maintained by **[Christopher Pitt](https://github.com/assertchris)**, **[Nuno Maduro](https://github.com/nunomaduro)**, and **[Oliver Nybroe](https://github.com/olivernybroe)**. Artwork is provided by **[Caneco](https://twitter.com/caneco)**.
 
 ## Try Plus in 10 seconds
 
