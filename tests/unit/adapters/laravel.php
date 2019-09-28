@@ -32,6 +32,7 @@ test('source maps are used to transform exceptions', () => {
     /** @var MockObject $original */
     $original = $this->createMock(ExceptionHandler::class);
     $exceptionHandler = new PlusExceptionHandler($original);
+
     $exception = new Exception('Here on the line 36');
 
     $original->expects($this->exactly(1))->method('report')->with($exception);

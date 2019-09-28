@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 declare(plus=1);
 
-$foo = new Foo();
+$foo = new FunctionKeywordTest();
 
 test('methods', () => {
     assertEquals('foo', $foo->method());
@@ -27,7 +27,7 @@ test('args', () => {
 
 
 //@formatter:off
-class Foo
+class FunctionKeywordTest
 {
     public method()
     {
