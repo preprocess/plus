@@ -152,4 +152,6 @@ $user: User = $collection->first();
 $age: int = $array[1]['age'];
 ```
 
+## Reserved names
 
+Variables, properties, constants, and class names should never be prefixed with the word `__plus`. Using the prefix `__plus` can cause unexpected behaviour in your application.
