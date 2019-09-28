@@ -5,10 +5,21 @@ $(macro: recursion) {
     $(optional(\Pre\Standard\Parser\arguments()))
     )
     $(optional(\Pre\Standard\Parser\returnType()))
-    $(between(token('{'), layer(), token('}')) as body)
+
+    $(either(
+        between(buffer('=>'), expression(), token(';')) as returnableBody,
+        between(token('{'), layer(), token('}')) as nonReturnableBody
+    ))
 } >> {
     $$(\Pre\Standard\Expander\visibilityModifiers($(visibilityModifiers))) function $(name) ($$(\Pre\Standard\Expander\arguments($(arguments)))) $$(\Pre\Standard\Expander\returnType($(returnType)))
     {
-        $(body)
+        $(nonReturnableBody ? {
+            $(nonReturnableBody);
+        })
+
+        $(returnableBody ? {
+            return $(returnableBody);
+        })
     }
 }
+
