@@ -1,0 +1,27 @@
+$(macro: recursive) {
+    class $(ns() as class)
+    {
+        $(layer() as body)
+    }
+} >> {
+    class $(class)
+    {
+        use \Pre\Plus\Engine\__Class;
+
+        $(body)
+    }
+}
+
+$(macro: recursive) {
+    function __construct($((...) as params))
+    {
+        $(layer() as body)
+    }
+} >> {
+    function __construct($(params))
+    {
+        $this->__plus();
+
+        $(body)
+    }
+}

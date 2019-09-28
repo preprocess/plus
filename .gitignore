@@ -3,5 +3,6 @@ composer.lock
 /playground/
 /src/*
 !/src/Adapters
+!/src/Engine
 /vendor/
 .phpunit.result.cache

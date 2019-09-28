@@ -1,0 +1,24 @@
+$(macro: recursive) {
+    $(ls(
+        chain(
+            \Pre\Standard\Parser\visibilityModifiers(),
+            token(T_VARIABLE) as name,
+            optional(chain(
+                token('='),
+                expression()
+            )) as value
+        ),
+        token(';')
+    ) as fields);
+} >> {
+    $(fields ... {
+        $$(\Pre\Standard\Expander\visibilityModifiers($(visibilityModifiers))) $(name);
+
+        $(value ? {
+            private function $$(\Pre\Plus\Engine\Support\squash($$(concat(__plus_$$(unvar($(name))) Property))))(): void
+            {
+                $$(\Pre\Plus\Engine\Support\squash($ this -> $$(unvar($(name))))) $(value);
+            }
+        })
+    })
+}
