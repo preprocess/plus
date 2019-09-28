@@ -1,6 +1,7 @@
 .idea/*
 composer.lock
 /playground/
-/src/
+/src/*
+!/src/Adapters
 /vendor/
 .phpunit.result.cache

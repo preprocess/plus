@@ -20,6 +20,9 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.15",
+        "illuminate/container": "^6.0",
+        "illuminate/contracts": "^6.0",
+        "illuminate/support": "^6.0",
         "localheinz/phpstan-rules": "^0.12.0",
         "nunomaduro/pest": "^0.1",
         "nunomaduro/phpinsights": "^1.7",
@@ -72,6 +75,13 @@
         "packagist": {
             "type": "composer",
             "url": "https://repo.packagist.org"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pre\\Plus\\Adapters\\Laravel\\ServiceProvider"
+            ]
         }
     }
 }
