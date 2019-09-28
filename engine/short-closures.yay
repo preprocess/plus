@@ -12,7 +12,7 @@ $(macro: recursion) {
 } >> function($ast) {
     $defined = array_fill_keys(array_map(function ($node) {
         return (string) $node->value();
-    }, $ast->{'params'}), true);
+    }, $ast->{'arguments'}), true);
 
     $scoped = ['$_' => true];
     $scope = (new \Yay\Ast('scope'))
