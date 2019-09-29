@@ -7,7 +7,7 @@ if you're not a programmer, you can get involved and make a difference.
 
 **Plus** is managed on [GitHub](https://github.com/preprocess/plus).
 
-## You are a developer?
+## Are you a developer?
 
 You may want to propose new features or improvements of existing **Plus** compiler. If you submit
 a new feature, please be willing to implement at least some of the code that would be needed to.

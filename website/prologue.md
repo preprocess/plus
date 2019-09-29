@@ -7,7 +7,7 @@ you can require using composer and is mainly used to add features and syntactic
 sugar to existent PHP code. Of course, those features arrive in PHP using runtime
 source code transformations **without any performance loss**.
 
-Also, it’s optional as is a per-file declaration - Painless to get started:
+Also, it’s optional as it is a per-file declaration - Painless to get started:
 
 ```php
 <?php
@@ -39,7 +39,7 @@ We focus on making the **code simpler**, offering you syntactic sugar to perform
 the most common tasks - do the same, writing less. Also, enjoy the productivity
 without breaking things, Plus's code is tailored for **static analysis**.
 
-**Plus is just like regular PHP** - it was first-class debug, and it's supported
+**Plus is just like regular PHP** - it has first-class debug support, and it's supported
 by the most common code editors. It's carefully crafted to make you the
 most productive developer in the world.
 

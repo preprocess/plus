@@ -12,8 +12,8 @@ You may install **Plus** by issuing the [Composer](https://getcomposer.org) `req
 composer require pre/plus
 ```
 
-After installing **Plus**, you need to add `declare(plus=1);` on PHP files where
-you wanna use the new syntax that **Plus** has to offer. Here is an example:
+After installing **Plus**, you need to add `declare(plus=1);` in PHP files where
+you want to use the new syntax that **Plus** has to offer. Here is an example:
 
 ```php
 <?php
